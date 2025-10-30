@@ -13,7 +13,7 @@ import { ApiTags, ApiOperation, ApiResponse, ApiParam, ApiQuery } from '@nestjs/
 import { EmployeesService } from './employees.service';
 import { Throttle, SkipThrottle } from '@nestjs/throttler';
 import { MyLoggerService } from 'src/my-logger/my-logger.service';
-import type { Prisma } from '@prisma/client';
+import { Prisma } from '@generated/prisma/client';
 
 @ApiTags('employees')
 @SkipThrottle()
