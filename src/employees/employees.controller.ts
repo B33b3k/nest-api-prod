@@ -10,7 +10,7 @@ import {
   Ip,
 } from '@nestjs/common';
 import { EmployeesService } from './employees.service';
-import { Prisma } from 'generated/prisma/browser';
+import { Prisma } from '@generated/prisma/browser';
 import { Throttle, SkipThrottle } from '@nestjs/throttler';
 import { MyLoggerService } from 'src/my-logger/my-logger.service';
 
