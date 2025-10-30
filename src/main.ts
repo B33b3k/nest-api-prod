@@ -26,7 +26,9 @@ async function bootstrap() {
   });
 
   // Set up API prefix
-  app.setGlobalPrefix(config.apiPrefix);
+  app.setGlobalPrefix(config.apiPrefix, {
+    exclude: ['/', '/health', `/${config.swagger.path}`, `/${config.swagger.path}-json`],
+  });
 
   // Set up Swagger documentation
   const swaggerConfig = new DocumentBuilder()
