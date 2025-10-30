@@ -31,7 +31,8 @@ export const appConfig = () => ({
   swagger: {
     path: process.env.SWAGGER_PATH || 'docs',
     title: process.env.SWAGGER_TITLE || 'NestJS Pro API',
-    description: process.env.SWAGGER_DESCRIPTION || 'Enterprise-grade NestJS API',
+    description:
+      process.env.SWAGGER_DESCRIPTION || 'Enterprise-grade NestJS API',
     version: process.env.SWAGGER_VERSION || '1.0',
   },
 });

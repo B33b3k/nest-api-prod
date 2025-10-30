@@ -19,20 +19,20 @@ import { MyLoggerModule } from './my-logger/my-logger.module';
     EmployeesModule,
     // CORRECT SYNTAX
     ThrottlerModule.forRoot({
-  throttlers: [
-    {
-      name: 'short',
-      ttl: 1000,
-      limit: 3,
-    },
-    // Optional: default fallback
-    {
-      name: 'long',
-      ttl: 60000,
-      limit: 100,
-    },
-  ],
-}),
+      throttlers: [
+        {
+          name: 'short',
+          ttl: 1000,
+          limit: 3,
+        },
+        // Optional: default fallback
+        {
+          name: 'long',
+          ttl: 60000,
+          limit: 100,
+        },
+      ],
+    }),
     MyLoggerModule,
   ],
   controllers: [AppController],
@@ -46,8 +46,6 @@ import { MyLoggerModule } from './my-logger/my-logger.module';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(ApiLoggerMiddleware)
-      .forRoutes('*');
+    consumer.apply(ApiLoggerMiddleware).forRoutes('*');
   }
 }

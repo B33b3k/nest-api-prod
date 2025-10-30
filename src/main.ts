@@ -5,12 +5,9 @@ import { MyLoggerService } from './my-logger/my-logger.service';
 import { CatchEverythingFilter } from './all-exceptions.filter';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule,
-    {
-      bufferLogs: true,
-    }
-    
-  );
+  const app = await NestFactory.create(AppModule, {
+    bufferLogs: true,
+  });
   const httpAdapterHost = app.get(HttpAdapterHost);
   app.useGlobalFilters(new CatchEverythingFilter(httpAdapterHost));
   app.useLogger(app.get(MyLoggerService));
