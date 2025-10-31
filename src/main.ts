@@ -49,8 +49,16 @@ async function bootstrap() {
   });
 
   // Start the application
-  await app.listen(config.port);
-  console.log(`Application is running on: http://localhost:${config.port}`);
-  console.log(`Swagger documentation: http://localhost:${config.port}/${config.swagger.path}`);
+  const port = process.env.PORT || config.port;
+  
+  console.log('Starting server...');
+  console.log(`Port: ${port}`);
+  console.log('Host: 0.0.0.0');
+  
+  await app.listen(port, '0.0.0.0');
+  
+  console.log('Server is ready!');
+  console.log(`Application is running on port: ${port}`);
+  console.log(`Swagger documentation path: /${config.swagger.path}`);
 }
 bootstrap();
