@@ -1,13 +1,20 @@
-# Nest Pro API
+# NestJS Production API
 
 <p align="center">
   <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" />
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+  <a href="https://nest-api-prod.onrender.com" target="_blank"><img src="https://img.shields.io/badge/Render-Live%20Demo-46E3B7" alt="Live Demo" /></a>
+  <a href="https://nest-api-prod.onrender.com/docs" target="_blank"><img src="https://img.shields.io/badge/Swagger-API%20Docs-85EA2D" alt="API Docs" /></a>
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/badge/NestJS-11.x-E0234E" alt="NestJS Version" /></a>
   <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
 </p>
+
+## 🌐 Live API
+
+- **Production URL**: [https://nest-api-prod.onrender.com](https://nest-api-prod.onrender.com)
+- **API Documentation**: [https://nest-api-prod.onrender.com/docs](https://nest-api-prod.onrender.com/docs)
 
 ## Overview
 A production-ready NestJS boilerplate demonstrating enterprise-level API development practices. Features include robust logging, rate limiting, database integration with Prisma, and comprehensive API documentation.
